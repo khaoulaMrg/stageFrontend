@@ -1,0 +1,46 @@
+/* Styles généraux */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f3f3f3;
+    margin: 0;
+    padding: 0;
+}
+
+/* Conteneur du formulaire */
+.example-container {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles pour les champs de formulaire */
+mat-form-field {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+/* Champs de formulaire */
+input[matInput], textarea[matInput] {
+    padding: 10px;
+}
+
+/* Bouton de soumission */
+button[mat-raised-button] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #1976d2;
+    color: white;
+}
+
+button[mat-raised-button]:hover {
+    background-color: #125aa5;
+}
+
+/* Messages d'erreur */
+mat-error {
+    color: #d32f2f;
+}

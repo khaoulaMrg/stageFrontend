@@ -1,0 +1,65 @@
+<!-- Mettez ce code dans votre template Angular -->
+<div class="parent">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <div class="child">
+    <div class="imeDiv">
+      <h2 class="form-title"><i class="material-icons">folder</i> Add Category</h2>
+    </div>
+    <form [formGroup]="postForm" class="form-container">
+      <div class="category">
+        <div class="row">
+
+
+          <div class="col-12  form-field ">
+            <mat-form-field appearance="fill">
+              <mat-label> <i class="material-icons">title</i> Titre</mat-label>
+              <input matInput placeholder="Titre" formControlName="name" />
+            </mat-form-field>
+          </div>
+
+
+          <div class="col-12 form-field">
+            <mat-form-field appearance="fill">
+              <mat-label><i class="material-icons">description</i>Content</mat-label>
+              <textarea matInput placeholder="Content" formControlName="content"></textarea>
+            </mat-form-field>
+          </div>
+          <div class="col-12 form-field">
+            <mat-form-field appearance="fill">
+              <mat-label><i class="material-icons">person</i>Posted By</mat-label>
+              <input matInput placeholder="Posted By" formControlName="postedBy" />
+            </mat-form-field>
+          </div>
+        
+
+          <div class="col-12 form-field">
+            <mat-form-field appearance="fill">
+              <mat-label><i class="material-icons">category</i>Category</mat-label>
+              <input matInput placeholder="Category" formControlName="category" />
+            </mat-form-field>
+          </div>
+
+
+          <div class="myStyle">
+            <mat-card class="style-mat-card">
+              <mat-card-actions>
+                <button mat-button color="warn" (click)="onClick()">
+                  <mat-icon>file_upload</mat-icon>
+                </button>
+              </mat-card-actions>
+            </mat-card><input type="file" #fileUpload id="fileUpload" name="fileUpload" multiple="multiple">
+            <span >{{fileName}}</span>
+          </div>
+        </div>
+
+
+
+      
+        
+
+      </div>
+      <button mat-button class="submit-button" (click)="createNewPost()">Post</button>
+    </form>
+  </div>
+</div>
